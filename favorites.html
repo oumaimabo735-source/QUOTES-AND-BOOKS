@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Compiled Wisdom — Bibliothèque Explorer</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar Header Placeholder -->
+    <header id="navbar-placeholder"></header>
+
+    <main class="main-content">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">My Saved Library & Quotes</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Curate your personal notebook of inspirational passages and classic literary works.</p>
+        </div>
+
+        <!-- Section Tabs (Saved Books vs Saved Quotes) -->
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem;" class="slide-up">
+          <button class="btn btn-primary" id="tab-fav-books" style="border-radius: 30px; padding: 0.6rem 2rem;">
+            📚 Saved Masterpieces
+          </button>
+          <button class="btn btn-secondary" id="tab-fav-quotes" style="border-radius: 30px; padding: 0.6rem 2rem;">
+            🖋 Saved Reflections
+          </button>
+        </div>
+
+        <!-- 1. FAVORITED BOOKS GRID -->
+        <div id="fav-books-section">
+          <div class="books-grid" id="favorites-books-grid">
+            <!-- Dynamic favorites -->
+          </div>
+        </div>
+
+        <!-- 2. FAVORITED QUOTES LIST -->
+        <div id="fav-quotes-section" style="display: none;">
+          <div class="quotes-grid" id="favorites-quotes-grid" style="grid-template-columns: 1fr; gap: 2rem;">
+            <!-- Dynamic favorites -->
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer placeholder -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- JS rendering controller -->
+    <script type="module">
+      import { renderFavoritesPage } from './js/app.js';
+      document.addEventListener('DOMContentLoaded', () => {
+        renderFavoritesPage();
+      });
+    </script>
+  </body>
+</html>

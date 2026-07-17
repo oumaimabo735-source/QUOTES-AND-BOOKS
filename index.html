@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bibliothèque Explorer — Explore Classics through Inspired Quotes</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Top Reading Progress Bar (injected by app.js) -->
+
+    <!-- Navigation Bar Header Placeholder -->
+    <header id="navbar-placeholder"></header>
+
+    <main class="main-content">
+      <!-- 1. HERO SECTION -->
+      <section class="hero container">
+        <h1 class="slide-up font-serif" style="font-size: 3.5rem; margin-bottom: 1rem; text-align: center;">
+          The Wisdom of Classics
+        </h1>
+        <p class="slide-up" style="font-size: 1.15rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem; text-align: center;">
+          Discover the world's most enduring literary treasures, guided by the profound thoughts and quotes they hold inside.
+        </p>
+
+        <!-- Quote of the Day Container -->
+        <div id="hero-quote-container">
+          <!-- Loading skeleton -->
+          <div class="hero-quote-card skeleton" style="height: 250px;"></div>
+        </div>
+      </section>
+
+      <!-- 2. GUEST DASHBOARD SECTION -->
+      <section class="container" id="dashboard-section" style="margin-bottom: 5rem;">
+        <div id="dashboard-section-placeholder">
+          <!-- Dynamically loaded guest panel -->
+        </div>
+      </section>
+
+      <!-- 3. FEATURED BOOKS -->
+      <section class="container" style="margin-bottom: 5rem;">
+        <div class="section-header">
+          <h2 class="section-title">Highly Rated Masterpieces</h2>
+          <a href="/books.html" class="view-all">
+            Browse All Books
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="books-grid" id="featured-books-grid">
+          <!-- Loading cards -->
+          <div class="book-card skeleton" style="height: 450px;"></div>
+          <div class="book-card skeleton" style="height: 450px;"></div>
+          <div class="book-card skeleton" style="height: 450px;"></div>
+        </div>
+      </section>
+
+      <!-- 4. CHOOSE BY LITERARY GENRE / CATEGORIES -->
+      <section class="container" style="margin-bottom: 5rem; text-align: center;">
+        <h2 class="section-title font-serif" style="display: inline-block; margin-bottom: 3rem;">Explore by Literary Category</h2>
+        <div class="category-pills" id="categories-grid" style="justify-content: center;">
+          <!-- Injected dynamic category pills -->
+        </div>
+      </section>
+
+      <!-- 5. RANDOM QUOTE GENERATOR (Immersive) -->
+      <section class="container" style="margin-bottom: 5rem; background-color: var(--progress-bg); padding: 4rem 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+        <h2 class="font-serif" style="text-align: center; margin-bottom: 2rem; font-size: 2.2rem;">A Moment of Contemplation</h2>
+        <div id="random-quote-container">
+          <!-- Loading random quote -->
+        </div>
+      </section>
+
+      <!-- 6. POPULAR HISTORIC AUTHORS -->
+      <section class="container" style="margin-bottom: 5rem;">
+        <div class="section-header">
+          <h2 class="section-title">Renowned Thinkers & Authors</h2>
+          <a href="/books.html?focus=authors" class="view-all">
+            All Authors
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="authors-grid" id="popular-authors-grid">
+          <!-- Loading authors -->
+          <div class="author-card skeleton" style="height: 350px;"></div>
+          <div class="author-card skeleton" style="height: 350px;"></div>
+          <div class="author-card skeleton" style="height: 350px;"></div>
+        </div>
+      </section>
+
+      <!-- 7. NEWSLETTER SECTION -->
+      <section class="newsletter">
+        <div class="container">
+          <div class="newsletter-box">
+            <h2 class="newsletter-title font-serif">Curated Literary Letters</h2>
+            <p class="newsletter-desc">
+              Get weekly hand-picked quotes, classic book analyses, and historical profiles directly in your inbox.
+            </p>
+            <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to our literary letters!'); this.reset();">
+              <input type="email" placeholder="Enter your email address" class="newsletter-input" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer placeholder -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Vanilla Javascript Loader -->
+    <script type="module">
+      import { renderHomePage } from './js/app.js';
+      document.addEventListener('DOMContentLoaded', () => {
+        renderHomePage();
+        // Handle URL Hash scrolling for dashboard redirect
+        if (window.location.hash === '#dashboard-section') {
+          setTimeout(() => {
+            const el = document.getElementById('dashboard-section');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 300);
+        }
+      });
+    </script>
+  </body>
+</html>

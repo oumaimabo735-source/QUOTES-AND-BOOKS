@@ -1,0 +1,6 @@
+{
+  "name": "Quote & Book Explorer",
+  "description": "An elegant, interactive library to explore classic books through inspiring quotes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thinker Profiles — Bibliothèque Explorer</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar Header Placeholder -->
+    <header id="navbar-placeholder"></header>
+
+    <main class="main-content">
+      <div class="container">
+        <!-- Back navigation button -->
+        <div style="margin-bottom: 2.5rem;" class="slide-up">
+          <a href="/books.html?focus=authors" class="btn btn-secondary btn-sm" style="font-size: 0.85rem; padding: 0.5rem 1.25rem;">
+            ← Back to Authors
+          </a>
+        </div>
+
+        <div id="author-profile-layout-placeholder">
+          <!-- Loading placeholder -->
+          <div style="text-align: center; padding: 4rem;">
+            <div class="skeleton" style="height: 350px; width: 100%; max-width: 900px; margin: 0 auto; border-radius: var(--radius-lg);"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer placeholder -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- JS rendering controller -->
+    <script type="module">
+      import { renderAuthorProfilePage } from './js/app.js';
+      document.addEventListener('DOMContentLoaded', () => {
+        renderAuthorProfilePage();
+      });
+    </script>
+  </body>
+</html>

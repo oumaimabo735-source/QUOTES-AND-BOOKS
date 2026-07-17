@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Ethos & Architecture — Bibliothèque Explorer</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar Header Placeholder -->
+    <header id="navbar-placeholder"></header>
+
+    <main class="main-content">
+      <div class="container" style="max-width: 800px;">
+        <div class="slide-up text-center" style="margin-bottom: 4rem;">
+          <h1 class="font-serif" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">Quote & Book Explorer</h1>
+          <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--accent-color); letter-spacing: 0.05em; text-transform: uppercase;">Bibliothèque Interactive de Citations et de Livres</h3>
+        </div>
+
+        <!-- Vision statement -->
+        <section class="slide-up" style="margin-bottom: 4rem;">
+          <p class="font-serif" style="font-size: 1.5rem; line-height: 1.7; text-align: center; color: var(--text-color); font-style: italic;">
+            "We believe that a single profound sentence can open the door to a lifetime of reading. Our library is built to guide modern minds through classic wisdom."
+          </p>
+        </section>
+
+        <!-- Dynamic statistics overview -->
+        <section class="slide-up" style="margin-bottom: 4rem;">
+          <div style="background-color: var(--card-bg); padding: 2.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+            <h3 class="font-serif" style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; color: var(--primary-color);">
+              The Digital Collection
+            </h3>
+            <p style="margin-bottom: 1.5rem;">The Bibliothèque houses a hand-selected collection of world masterpieces, historical philosophies, and inspiring thoughts:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+              <div>
+                <span class="font-serif" style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color);" id="about-books-count">6</span>
+                <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-top: 0.25rem;">Classic Volumes</p>
+              </div>
+              <div>
+                <span class="font-serif" style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color);" id="about-quotes-count">12</span>
+                <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-top: 0.25rem;">Compiled Quotes</p>
+              </div>
+              <div>
+                <span class="font-serif" style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color);" id="about-authors-count">4</span>
+                <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-top: 0.25rem;">Historic Thinkers</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features grid -->
+        <section class="slide-up" style="margin-bottom: 4rem;">
+          <h3 class="font-serif text-center" style="font-size: 1.8rem; margin-bottom: 2.5rem;">Core Experiences</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+              <span style="font-size: 2rem; padding: 0.5rem; background: var(--secondary-color); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">🧭</span>
+              <div>
+                <h4 class="font-serif" style="font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--primary-color);">Interactive Guest Dashboard</h4>
+                <p style="font-size: 0.95rem; line-height: 1.6;">Activate guest mode with a single click to track reading goals, log historical milestones, see real-time updates, and unlock achievements.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+              <span style="font-size: 2rem; padding: 0.5rem; background: var(--secondary-color); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">🖋</span>
+              <div>
+                <h4 class="font-serif" style="font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--primary-color);">Thinker Biographies & Legacy</h4>
+                <p style="font-size: 0.95rem; line-height: 1.6;">Traverse history by reading contextual profiles of deep thinkers (such as Marcus Aurelius, Friedrich Nietzsche, Fyodor Dostoevsky) alongside their major works.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+              <span style="font-size: 2rem; padding: 0.5rem; background: var(--secondary-color); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">🔐</span>
+              <div>
+                <h4 class="font-serif" style="font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--primary-color);">Local Privacy-First Core</h4>
+                <p style="font-size: 0.95rem; line-height: 1.6;">No accounts, no email spam, and no servers. All reading streaks, favorites, and progress indicators are securely saved inside your browser's LocalStorage.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA back to home -->
+        <section class="slide-up text-center" style="margin-top: 5rem;">
+          <h3 class="font-serif" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Ready to Begin Your Journey?</h3>
+          <a href="/index.html" class="btn btn-primary" style="padding: 0.75rem 2.5rem; border-radius: 30px; font-size: 1.05rem;">
+            Activate Reader Dashboard
+          </a>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer placeholder -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- JS rendering controller -->
+    <script type="module">
+      import { renderAboutPage } from './js/app.js';
+      document.addEventListener('DOMContentLoaded', () => {
+        renderAboutPage();
+      });
+    </script>
+  </body>
+</html>
